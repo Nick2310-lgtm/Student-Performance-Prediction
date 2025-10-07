@@ -20,5 +20,4 @@
    - Accuracy, Precision, Recall, F1, Cohen’s Kappa.
    - Compare results visually using bar plots.
 
-This matches Ahmed (2024), *Student Performance Prediction Using Machine Learning Algorithms*,  
-except the dataset is replaced with the open-source **UCI Kaggle dataset**.
+This matches Ahmed (2024), *Student Performance Prediction Using Machine Learning Algorithms*,  except the dataset is replaced with the open-source **UCI Kaggle dataset**.
