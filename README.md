@@ -1,28 +1,36 @@
-# TYBTechML_Group55_StudentPerformance_UCI
+# TYBTechML_Group55_StudentPerformancePrediction
 
-**Title:** Student Performance Prediction Using Machine Learning Algorithms  
-**Based on:** Ahmed, E. (2024), *Applied Computational Intelligence and Soft Computing*  
-**Dataset:** UCI Student Performance (Portuguese schools) — [Kaggle link](https://www.kaggle.com/datasets/larsen0966/student-performance-data-set)
+**Reproducing:** Ahmed, E. (2024) "Student Performance Prediction Using Machine Learning Algorithms"  
+**Extension dataset:** UCI Student Performance (Portuguese schools) — Kaggle: https://www.kaggle.com/datasets/larsen0966/student-performance-data-set
 
-## 1️⃣ Overview
-This project reproduces the ML workflow of Ahmed (2024) using an open Kaggle dataset instead of the original university data.
-The pipeline includes:
-- Data preprocessing and feature encoding
-- Random Forest–based feature selection
-- K-Means clustering
-- Model training with SVM, Decision Tree, KNN, and Naive Bayes
-- Hyperparameter tuning and evaluation (Accuracy, Precision, Recall, Cohen’s Kappa)
+## Summary
+This repository reproduces the Ahmed (2024) pipeline (preprocessing → feature selection → clustering → modeling → evaluation) and applies it to the UCI Student dataset.
 
-## 2️⃣ Dataset
-- Files: `student-mat.csv` and `student-por.csv`
-- Total records: ~650 students
-- Features: demographics, academic grades (G1, G2, G3), study time, absences, family info
-- Target: derived `final_result` column (Pass/Fail)
-
-## 3️⃣ How to Run
+## Minimal run instructions
+1. Place the dataset CSV(s) in `data/` (see `data/README_DATA.txt`):
+   - `student-mat.csv` and/or `student-por.csv` (Kaggle).  
+2. Create and activate Python environment:
 ```bash
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
+```
+3. Run the pipeline:
+```bash
 python src/data_prep.py
 python src/feature_selection.py
-python src/clustering.py
 python src/train_models.py
+python src/evaluate.py
+```
+4. Results (metrics, models, plots) will be in `results/`.
+
+## Files included
+- `src/` — core Python scripts
+- `data/README_DATA.txt` — dataset link and notes
+- `docs/` — methodology & extension explanations
+- `Paper_PDF/` — include `TYBTechML_Group1_StudentPerformancePrediction.pdf` (paper)
+- `requirements.txt`, `.gitignore`
+
+## Notes
+- The code creates `results/` at runtime and writes intermediate outputs there.
+- Default target: binary `Pass` if `G3 >= 10`, else `Fail`. See `src/data_prep.py` to change to multiclass.
