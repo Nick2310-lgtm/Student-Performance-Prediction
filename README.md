@@ -1,4 +1,4 @@
-# Student Performance Prediction-Group 55(Mini Project)
+# Student Performance Prediction
 
 This project reproduces and extends the paper **“Student Performance Prediction Using Machine Learning Algorithms” (Ahmed, 2024, Wiley Journal)**. It predicts student performance using socio-economic and academic features with multiple machine learning models.
 
