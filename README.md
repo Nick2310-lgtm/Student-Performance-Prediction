@@ -1,6 +1,6 @@
 # Student Performance Prediction-Mini Project
 
-Group 55- Nicholas Coutinho(16014223058)
+Group 55-Nicholas Coutinho(16014223058)
 
 This project reproduces and extends the paper **“Student Performance Prediction Using Machine Learning Algorithms” (Ahmed, 2024, Wiley Journal)**. It predicts student performance using socio-economic and academic features with multiple machine learning models.
 
